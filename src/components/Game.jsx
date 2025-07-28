@@ -162,6 +162,7 @@ export default function Game({ animals, duration, onRestart, grid, theme}) {
 
         <div className="words-panel">
           {/* <h1 id="titulo_jogo">Caça palavras</h1> */}
+          <button className="btnInicio" onClick={onRestart}>Voltar para a tela inicial</button>
           <h2>Tempo restante: <span id="tempo">{formatTime(timeLeft)}</span></h2>
 
           {gameOver && (
