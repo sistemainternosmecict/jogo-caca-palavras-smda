@@ -1,0 +1,191 @@
+@font-face {
+  font-family: 'GastonDemo';
+  src: url('../public/fonts/gaston/GastonDemo.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Dream School';
+  src: url('../public/fonts/dream_school/Dream School.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Dream School Rounded';
+  src: url('../public/fonts/dream_school/Dream School Rounded.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Kidtype';
+  src: url('../public/fonts/kidtype/Kidtype.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+html,
+body {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  /* background-color: #008080; */
+  font-family: "Kidtype";
+  font-size: 1.5em;
+  /* background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; */
+  width: 100%;
+  height: 100vh;
+  user-select: none;
+}
+
+#titulo_jogo{
+  font-family: "Dream School Rounded", sans-serif;
+  color: #008080;
+  font-size: 3em;
+  letter-spacing: 4px;
+}
+
+#tempo{
+  letter-spacing: 16px;
+  background-color: orange;
+  padding: 8px;
+  font-size: 1.2em;
+  font-weight: bold;
+  border: solid 1px black;
+}
+
+.game-container > h1 {
+  color: white;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(16, 40px);
+  grid-gap: 0px;
+  background-color: rgba(255,255,255,0.8);
+  border-radius: 30px;
+  padding: 16px;
+  touch-action: none;
+  border: solid 1px black;
+}
+
+.cell {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-weight: bold;
+  user-select: none;
+  border-radius: 50px;
+  
+  &:hover {
+    background-color: green;
+    color: white;
+  }
+}
+
+.cell.selected {
+  background-color: #90caf9;
+}
+
+.words-panel {
+  /* margin-top: 20px; */
+  text-align: left;
+  margin-left: 20px;
+  background-color: rgba(255,255,255,0.6);
+  padding: 8px 32px;
+  border-radius: 16px;
+  border: solid 1px black;
+}
+
+.words-panel > div > ul {
+  list-style: none;
+  list-style-position: inside; /* O marcador fica dentro do conteúdo */
+  padding-left: 0; /* Remove a indentação padrão */
+  margin-left: 0;
+  display: flex;
+  max-width: 400px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.words-panel > div > ul > li{
+  border: solid 1px black;
+  margin: 8px;
+  flex-basis: 100px;
+  flex-shrink: 1;
+  flex-grow: 1;
+  color: black;
+  padding: 4px;
+}
+
+.words-panel > ul {
+  list-style: none;
+  list-style-position: inside; /* O marcador fica dentro do conteúdo */
+  padding-left: 0; /* Remove a indentação padrão */
+  margin-left: 0;
+  display: flex;
+  max-width: 400px;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.words-panel > ul > li {
+  background-color: white;
+  border: solid 1px black;
+  margin: 8px;
+  flex-basis: 100px;
+  flex-shrink: 1;
+  flex-grow: 1;
+  color: black;
+  padding: 4px;
+}
+
+.horizontal-container {
+  display: flex;
+}
+
+.cell.found {
+  background-color: rgba(255, 0, 0, 0.4); /* vermelho transparente */
+  color: black;
+  font-weight: bold;
+}
+
+.mensagem-final {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.mensagem-final button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+  border: solid 1px black;
+}
+
+@keyframes pulse {
+  0%{
+    border: solid 4px black;
+  }
+  50%{
+    border: solid 4px white;
+  }
+  100%{
+    border: solid 4px black;
+  }
+}
