@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import logoEdu from "./edu1.png"
-// import logoSMDA from "./logo-smda.svg"
 import "./StartScreen.css"
 
 export default function StartScreen({ onStart }) {
@@ -40,9 +39,9 @@ export default function StartScreen({ onStart }) {
       <footer id="rodape">
         <figure>
           <img className="logoEdu" src={logoEdu} alt="logo_da_secretaria_de_educação" />
-          {/* <img className="logoEdu" src={logoSMDA} alt="logo_da_secretaria_de_educação" /> */}
-          <figcaption>Uma parceria entre Secretaria Municipal de Educação e Secretaria Municipal do Direito dos Animais</figcaption>
+          <img className="logoEdu" src="./logo-smda.svg" alt="logo_da_secretaria_do_direito_dos_animais" />
         </figure>
+        <p>Uma parceria entre Secretaria Municipal de Educação e Secretaria Municipal do Direito dos Animais</p>
       </footer>
     </div>
   );

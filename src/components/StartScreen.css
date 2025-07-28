@@ -40,20 +40,17 @@ body{
   text-align: center;
   background-color: rgba(0, 128, 128, 0.4);
   background-repeat: repeat;
-  background-size: 500px;
+  background-size: 200px;
   user-select: none;
+  background-image: url("../../public/fundo_bg.svg");
 }
 
 .start-screen h1 {
   font-size: 3rem;
-  /* color: #2c2c2c; */
   color: white;
   margin-bottom: 40px;
-  font-family: "Kidtype";
-  /* background-color: white; */
   padding: 16px;
   border-radius: 12px;
-  /* box-shadow: 0 2px 8px black; */
   letter-spacing: 8px;
 }
 
@@ -61,15 +58,10 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* margin-bottom: 20px; */
     font-size: 1.4rem;
-    /* color: #333; */
     color: white;
-    /* background-color: white; */
     padding: 16px;
     border-radius: 12px;
-    /* box-shadow: 0 2px 8px black; */
-    /* font-family: "Dream School Rounded"; */
 }
 
 .start-screen select,
@@ -122,12 +114,16 @@ footer{
   width: 100vw;
   bottom: 0;
   figure{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     img.logoEdu{
       width: 300px;
+      height: fit-content;
     }
 
-    figcaption{
-      color: white;
-    }
+  }
+  p{
+    color: white;
   }
 }
