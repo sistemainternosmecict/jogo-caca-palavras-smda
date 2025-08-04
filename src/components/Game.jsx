@@ -1,8 +1,8 @@
 import { useState, useRef, useEffect } from "react";
 import Cell from "./Cell";
 import PopUpAnimal from "./PopUpAnimal";
-import passarosBg from "./fundo-passaros.png"
-import mamiferosBg from "./fundo-mamiferos.png"
+import gatosBg from "./gatos_bg.jpg"
+import cachorrosBg from "./cachorros_bg.jpg"
 import "../index.css";
 
 export default function Game({ animals, duration, onRestart, grid, theme}) {
@@ -126,7 +126,7 @@ export default function Game({ animals, duration, onRestart, grid, theme}) {
   };
 
   return (
-    <div className="game-container" style={{backgroundPosition:"center", backgroundSize: "cover", backgroundImage: `url(${(theme == "mamiferos" ? mamiferosBg :passarosBg)})`}}>
+    <div className="game-container" style={{backgroundPosition:"center", backgroundSize: "cover", backgroundImage: `url(${(theme == "gatos" ? gatosBg :cachorrosBg)})`}}>
       <div className="horizontal-container">
         <div
           className="grid"
@@ -201,6 +201,7 @@ export default function Game({ animals, duration, onRestart, grid, theme}) {
           setPopupWord(null);
         }}
         duration={3000}
+        theme={theme}
       />
 
     </div>

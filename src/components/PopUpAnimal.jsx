@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import "./PopUpAnimal.css";
 
-export default function PopUpAnimal({ word, onClose, duration = 3000 }) {
+export default function PopUpAnimal({ word, onClose, duration = 3000, theme }) {
   useEffect(() => {
     if (!word) return;
     const timer = setTimeout(() => {
@@ -20,7 +20,21 @@ export default function PopUpAnimal({ word, onClose, duration = 3000 }) {
       .replace(/ç/g, "c")
       .toLowerCase();
 
-  const imagePath = `/animais/${normalize(word)}.png`;
+      
+  const extensoes = ['.avif', '.webp', '.png', '.jpg'];
+      
+  function encontrarImagem(nomeBase) {
+    for (const ext of extensoes) {
+      try {
+        return require(`../../public/animais/${theme}/${normalize(nomeBase)}${ext}`);
+      } catch (e) {
+        continue;
+      }
+    }
+    return null;
+  }
+
+  const imagePath = encontrarImagem(word);
 
   return (
     <div className="popup-overlay">

@@ -3,7 +3,7 @@ import logoEdu from "./edu1.png"
 import "./StartScreen.css"
 
 export default function StartScreen({ onStart }) {
-  const [theme, setTheme] = useState("mamiferos");
+  const [theme, setTheme] = useState("gatos");
   const [time, setTime] = useState(3);
 
   const handleStart = () => {
@@ -17,8 +17,8 @@ export default function StartScreen({ onStart }) {
       <label>
         Tema:
         <select value={theme} onChange={(e) => setTheme(e.target.value)}>
-          <option value="mamiferos">Mamíferos</option>
-          <option value="passaros">Aves</option>
+          <option value="gatos">Gatos</option>
+          <option value="cachorros">Cachorros</option>
         </select>
       </label>
 

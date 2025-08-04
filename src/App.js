@@ -2,8 +2,8 @@ import { useState } from "react";
 import StartScreen from "./components/StartScreen";
 import Game from "./components/Game";
 
-import { mamiferos } from "./components/words/mamiferos";
-import { passaros } from "./components/words/passaros";
+import { gatos } from "./components/words/gatos";
+import { cachorros } from "./components/words/cachorros";
 import { generateWordSearch } from "./components/GridGenerator";
 
 export default function App() {
@@ -13,11 +13,11 @@ export default function App() {
   const handleStart = ({ theme, time }) => {
     setBgUrl(theme)
     let wordList = [];
-    if (theme === "mamiferos") {
-      wordList = mamiferos;
+    if (theme === "gatos") {
+      wordList = gatos;
     }
-    if (theme === "passaros") {
-      wordList = passaros;
+    if (theme === "cachorros") {
+      wordList = cachorros;
     }
     
     const grid = generateWordSearch(wordList)
