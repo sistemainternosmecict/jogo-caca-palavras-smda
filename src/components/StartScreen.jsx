@@ -1,6 +1,18 @@
 import { useState } from "react";
-import logoEdu from "./edu1.png"
+import logoEdu from "./logo_edu_smda.svg"
 import "./StartScreen.css"
+import styled from "styled-components";
+
+const Logo = styled.img`
+  width: 400px;
+  margin-bottom: 32px;
+  background-color: rgba(70, 41, 15, 0.96);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.8);
+  padding: 32px;
+  border-radius: 8px;
+  border: solid 2px rgba(189, 145, 106, 0.96);
+  //filter: drop-shadow(0 0 16px rgba(255, 215, 130, 0.4)) grayscale(100%) brightness(0);
+`;
 
 export default function StartScreen({ onStart }) {
   const [theme, setTheme] = useState("gatos");
@@ -12,9 +24,9 @@ export default function StartScreen({ onStart }) {
 
   return (
     <div className="start-screen">
-      <h1>Caça-Palavras</h1>
+      <Logo src="./logo_caca_palavras.png" alt="logo" />
 
-      <label>
+      <label style={{width: "100%", maxWidth: "400px", margin: "4px 0", boxShadow:"0 0 4px black", background: "rgba(255,255,255,0.8)"}}>
         Tema:
         <select value={theme} onChange={(e) => setTheme(e.target.value)}>
           <option value="gatos">Gatos</option>
@@ -22,7 +34,7 @@ export default function StartScreen({ onStart }) {
         </select>
       </label>
 
-      <label>
+      <label style={{width: "100%", maxWidth: "400px", margin: "4px 0", boxShadow:"0 0 4px black", background: "rgba(255,255,255,0.8)"}}>
         Tempo de jogo (minutos):
         <input
           type="number"
@@ -39,7 +51,6 @@ export default function StartScreen({ onStart }) {
       <footer id="rodape">
         <figure>
           <img className="logoEdu" src={logoEdu} alt="logo_da_secretaria_de_educação" />
-          <img className="logoEdu" src="./logo-smda.svg" alt="logo_da_secretaria_do_direito_dos_animais" />
         </figure>
         <p>Uma parceria entre Secretaria Municipal de Educação e Secretaria Municipal do Direito dos Animais</p>
       </footer>

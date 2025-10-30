@@ -126,7 +126,7 @@ export default function Game({ animals, duration, onRestart, grid, theme}) {
   };
 
   return (
-    <div className="game-container" style={{backgroundPosition:"center", backgroundSize: "cover", backgroundImage: `url(${(theme == "gatos" ? gatosBg :cachorrosBg)})`}}>
+    <div className="game-container" style={{backgroundPosition:"center", backgroundSize: "cover", backgroundImage: `url(/fundo_caca_palavras.png)`}}>
       <div className="horizontal-container">
         <div
           className="grid"
