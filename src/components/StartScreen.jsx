@@ -48,11 +48,10 @@ export default function StartScreen({ onStart }) {
 
       <button onClick={handleStart}>Iniciar Jogo</button>
 
-      <footer id="rodape">
+      <footer style={{padding: "16px 0"}} id="rodape">
         <figure>
           <img className="logoEdu" src={logoEdu} alt="logo_da_secretaria_de_educação" />
         </figure>
-        <p>Uma parceria entre Secretaria Municipal de Educação e Secretaria Municipal do Direito dos Animais</p>
       </footer>
     </div>
   );
