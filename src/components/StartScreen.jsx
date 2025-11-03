@@ -53,7 +53,7 @@ export default function StartScreen({ onStart }) {
 
       <footer style={{padding: "8px 0", position: "absolute", bottom: 0}} id="rodape">
         <figure>
-          <img className="logoEdu" src={logoEdu} alt="logo_da_secretaria_de_educação" />
+          <img style={{width: "400px"}} className="logoEdu" src={logoEdu} alt="logo_da_secretaria_de_educação" />
         </figure>
       </footer>
     </div>
